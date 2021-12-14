@@ -27,7 +27,7 @@ func main() {
 
 	for update := range updates {
 		if update.Message != nil {
-			if update.Message.From.ID == 777000 && !update.Message.IsAutomaticForward {
+			if update.Message.From.ID == 136817688 || update.Message.From.ID == 777000 && !update.Message.IsAutomaticForward {
 				log.Printf("Message sent as channel from @%s, deleting and banning\n",
 					update.Message.SenderChat.UserName)
 				ban := tgbotapi.BanChatSenderChatConfig{
